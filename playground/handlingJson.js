@@ -1,11 +1,11 @@
 const fs = require('fs');
 
 const fileBuffer = fs.readFileSync('1-json.json');
-const parsedFile = JSON.parse(fileBuffer.toString());
+const parsedObject = JSON.parse(fileBuffer.toString());
 
-parsedFile.name =  'Antonio';
-parsedFile.age = 25;
+parsedObject.name =  'Jose Antonio';
+parsedObject.age = 25;
 
-const newJSON = JSON.stringify(parsedFile);
+const newJSON = JSON.stringify(parsedObject);
 // console.log(newJSON);
 fs.writeFileSync('1-json.json', newJSON);
